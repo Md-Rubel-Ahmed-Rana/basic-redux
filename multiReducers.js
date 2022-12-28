@@ -70,7 +70,7 @@ const productReducer = (state = productsState, action) =>{
 }
 
 
-// products reducer
+// cart reducer
 const cartReducer = (state = cartState, action) =>{
     switch (action.type) {
         case GET_CART:
@@ -89,7 +89,7 @@ const cartReducer = (state = cartState, action) =>{
 }
 
 
-// combine multiple reducers
+// combine multiple reducers inside rootReducer
 const rootReducer = combineReducers({
     cartReducer,
     productReducer
@@ -110,6 +110,6 @@ store.dispatch(getProductsAction())
 store.dispatch(addProductsAction("pen"))
 
 
-// dispatch products action
+// dispatch cart action
 store.dispatch(getCartAction())
 store.dispatch(addCartAction("pen"))
